@@ -18,7 +18,7 @@ TEST_CASE("classify temperate breach") {
   REQUIRE(classifyTemperatureBreach(MED_ACTIVE_COOLING, 41) == TOO_HIGH);
 }
 
-/* TEST_CASE("Test checkAndAlert(to email too high)") {
+ TEST_CASE("Test checkAndAlert(to email too high)") {
 
   BatteryCharacter batterych_HAC = {
     .coolingType = HI_ACTIVE_COOLING
@@ -69,4 +69,3 @@ TEST_CASE("Test checkAndAlert(to controller)") {
   std::cout.rdbuf(streambuf_1);
   REQUIRE(toController.str() == "65261 : 2\n");
 }
-*/

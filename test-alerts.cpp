@@ -35,6 +35,7 @@ TEST_CASE("classify temperate breach") {
   REQUIRE(toEmail.str() == "To: a.b@c.com\nHi, the temperature is too high\n");
 }
 
+
 TEST_CASE("Test checkAndAlert(to email too low)") {
   
   BatteryCharacter batterych_PC = {

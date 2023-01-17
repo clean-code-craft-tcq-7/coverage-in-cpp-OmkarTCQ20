@@ -1,5 +1,4 @@
 #pragma once
-
 #include <stdio.h>
 #include <iostream>
 #include <sstream>
@@ -34,4 +33,3 @@ void checkAndAlert(
 
 void sendToController(BreachType breachType);
 void sendToEmail(BreachType breachType);
-

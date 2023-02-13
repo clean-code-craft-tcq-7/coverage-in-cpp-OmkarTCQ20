@@ -67,4 +67,5 @@ TEST_CASE("Test checkAndAlert(to controller)") {
   //restore out stream
   std::cout.rdbuf(streambuf_1);
   REQUIRE(toController.str() == "65261 : 2\n");
+
 }

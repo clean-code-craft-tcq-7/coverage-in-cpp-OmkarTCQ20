@@ -22,7 +22,7 @@ TEST_CASE("Test checkAndAlert(to email too high)") {
 
   BatteryCharacter batterych_HAC = {
     .coolingType = HI_ACTIVE_COOLING
-  };
+  }
 
   std::ostringstream toEmail;
   std::streambuf* streambuf_1 = std::cout.rdbuf();
@@ -39,7 +39,7 @@ TEST_CASE("Test checkAndAlert(to email too low)") {
   
   BatteryCharacter batterych_PC = {
     .coolingType = PASSIVE_COOLING
-  };
+  }
   
   std::ostringstream toEmail;
   std::streambuf* streambuf_2 = std::cout.rdbuf();
@@ -56,7 +56,7 @@ TEST_CASE("Test checkAndAlert(to controller)") {
 
   BatteryCharacter batterych = {
     .coolingType = HI_ACTIVE_COOLING
-  };
+  }
 
   std::ostringstream toController;
   std::streambuf* streambuf_1 = std::cout.rdbuf();

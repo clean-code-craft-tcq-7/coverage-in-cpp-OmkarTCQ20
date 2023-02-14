@@ -1,5 +1,9 @@
 #pragma once
 
+#include <stdio.h>
+#include <iostream>
+#include <sstream>
+
 typedef enum {
   PASSIVE_COOLING,
   HI_ACTIVE_COOLING,

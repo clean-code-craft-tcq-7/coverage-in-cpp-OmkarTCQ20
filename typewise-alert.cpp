@@ -1,5 +1,4 @@
 #include "typewise-alert.h"
-#include <stdio.h>
 
 BreachType inferBreach(double value, double lowerLimit, double upperLimit) {
   if(value < lowerLimit) {
@@ -24,7 +23,7 @@ BreachType classifyTemperatureBreach(
       lowerLimit = 0;
       upperLimit = 45;
       break;
-    case MED_ACTIVE_COOLING:
+    default:
       lowerLimit = 0;
       upperLimit = 40;
       break;
@@ -51,21 +50,21 @@ void checkAndAlert(
 
 void sendToController(BreachType breachType) {
   const unsigned short header = 0xfeed;
-  printf("%x : %x\n", header, breachType);
+  std::cout << header << " : " << breachType << std::endl;
 }
 
 void sendToEmail(BreachType breachType) {
   const char* recepient = "a.b@c.com";
   switch(breachType) {
     case TOO_LOW:
-      printf("To: %s\n", recepient);
-      printf("Hi, the temperature is too low\n");
+      std::cout << "To: " << recepient << std::endl;
+      std::cout << "Hi, the temperature is too low" << std::endl;
       break;
     case TOO_HIGH:
-      printf("To: %s\n", recepient);
-      printf("Hi, the temperature is too high\n");
+      std::cout << "To: " << recepient << std::endl;
+      std::cout << "Hi, the temperature is too high" << std::endl;
       break;
-    case NORMAL:
+    default:
       break;
   }
 }
